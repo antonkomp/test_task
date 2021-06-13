@@ -11,7 +11,7 @@ def request_decorator(func):
         try:
             return func()
         except requests.exceptions.ConnectionError:
-            raise Exception("Server openexchangerates.org don't ask!")
+            raise Exception("Server openexchangerates.org is not responding!")
     return wrapper
 
 
